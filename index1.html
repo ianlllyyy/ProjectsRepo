@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serenade Realty</title>
+  <link rel="stylesheet" href="style1.css">
+
+  <!-- Elegant Gold Home Icon Favicon -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/e0c097/home-page.png" type="image/png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            antique: '#FAEBD7',
+            champagne: '#E0C097',
+            taupe: '#D9CAB3',
+            charcoal: '#3B3B3B',
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="font-sans bg-white text-charcoal">
+
+  <!-- Navbar -->
+  <header class="fixed w-full bg-white shadow-sm z-50">
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <h1 class="text-2xl font-semibold text-champagne tracking-wide">Serenade</h1>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="hover:text-champagne">Home</a>
+        <a href="#" class="hover:text-champagne">About</a>
+        <a href="#" class="hover:text-champagne">Properties</a>
+        <a href="#" class="hover:text-champagne">Agents</a>
+        <a href="#" class="hover:text-champagne">Contact</a>
+      </nav>
+      <button class="bg-champagne text-white px-5 py-2 rounded-full hover:bg-taupe transition hidden md:block">
+        Get Started
+      </button>
+      <button id="menu-btn" class="md:hidden text-2xl">&#9776;</button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden bg-white md:hidden">
+      <a href="#" class="block px-4 py-2 border-t">Home</a>
+      <a href="#" class="block px-4 py-2 border-t">About</a>
+      <a href="#" class="block px-4 py-2 border-t">Properties</a>
+      <a href="#" class="block px-4 py-2 border-t">Agents</a>
+      <a href="#" class="block px-4 py-2 border-t">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Carousel Section -->
+  <section class="relative h-screen flex flex-col justify-center items-center text-center overflow-hidden">
+    <div class="carousel bg-[url('./images/lux.jpg')]" id="slide1"></div>
+    <div class="carousel bg-[url('./images/lux0.jpg')]" id="slide2"></div>
+    <div class="carousel bg-[url('./images/lux1.jpg')]" id="slide3"></div>
+
+    <div class="absolute inset-0 bg-white bg-opacity-60"></div>
+
+    <div class="relative z-10 px-6">
+      <h2 class="text-5xl md:text-6xl font-light mb-6 text-charcoal">Find Serenity in Every Space</h2>
+      <p class="text-lg md:text-xl mb-8 text-gray-700">Luxury homes designed with simplicity, comfort, and elegance in mind.</p>
+      <div class="bg-white shadow-md rounded-full p-2 flex flex-wrap gap-2 max-w-xl mx-auto border border-gray-200">
+        <input type="text" placeholder="Enter Location" class="flex-1 p-2 rounded-full focus:outline-champagne text-gray-700">
+        <button class="bg-champagne text-white px-5 py-2 rounded-full hover:bg-taupe transition">Search</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Properties -->
+  <section class="py-20 container mx-auto px-6 fade-in">
+    <h3 class="text-3xl font-light text-center mb-12 text-charcoal tracking-wide">Featured Properties</h3>
+    <div class="grid md:grid-cols-3 gap-10">
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./images/lux.jpg" alt="Home" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-medium mb-2">Elegant Family Villa</h4>
+          <p class="text-gray-600 mb-4">₱8,200,000 · Tagaytay</p>
+          <button 
+            class="view-details bg-champagne text-white px-4 py-2 rounded-full hover:bg-taupe transition"
+            data-title="Elegant Family Villa"
+            data-location="Tagaytay"
+            data-price="₱8,200,000"
+            data-description="A spacious villa surrounded by nature and tranquility. Perfect for families seeking both luxury and peace."
+            data-image="./images/lux.jpg"
+            data-bedrooms="4"
+            data-bathrooms="3"
+            data-lot="250 sqm"
+            data-amenities="Private Pool, Garden, Balcony, Garage">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./images/lux0.jpg" alt="Home" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-medium mb-2">Minimalist Condo Suite</h4>
+          <p class="text-gray-600 mb-4">₱4,500,000 · Makati</p>
+          <button 
+            class="view-details bg-champagne text-white px-4 py-2 rounded-full hover:bg-taupe transition"
+            data-title="Minimalist Condo Suite"
+            data-location="Makati"
+            data-price="₱4,500,000"
+            data-description="A modern condo in the heart of the city, combining minimalist style with urban sophistication."
+            data-image="./images/lux0.jpg"
+            data-bedrooms="2"
+            data-bathrooms="2"
+            data-lot="95 sqm"
+            data-amenities="Sky Lounge, Gym, Pool, 24/7 Security">
+            View Details
+          </button>
+        </div>
+      </div>
+
+      <div class="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+        <img src="./images/lux1.jpg" alt="Home" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-medium mb-2">Modern Eco House</h4>
+          <p class="text-gray-600 mb-4">₱7,800,000 · Cavite</p>
+          <button 
+            class="view-details bg-champagne text-white px-4 py-2 rounded-full hover:bg-taupe transition"
+            data-title="Modern Eco House"
+            data-location="Cavite"
+            data-price="₱7,800,000"
+            data-description="An eco-friendly smart home designed for sustainable living with a touch of luxury."
+            data-image="./images/lux1.jpg"
+            data-bedrooms="3"
+            data-bathrooms="2"
+            data-lot="180 sqm"
+            data-amenities="Solar Panels, Smart System, Garden, Patio">
+            View Details
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Partnership Section -->
+<section class="py-16 bg-white font-[Source_Sans_Pro]">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-3xl font-semibold text-[#5c4033] mb-12 tracking-normal">Our Partnerships</h2>
+
+    <div class="flex flex-wrap justify-between gap-8 items-center">
+      <!-- Partner 1 -->
+      <div class="overflow-hidden rounded-2xl transition-transform duration-250 hover:scale-[1.02] flex-1 min-w-[100px] max-w-[140px] mx-auto">
+        <img src="./images/zero.png" alt="Partner 1"
+             class="w-full h-25 object-cover transition-transform duration-400 ease-in-out hover:scale-105">
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="overflow-hidden rounded-2xl transition-transform duration-250 hover:scale-[1.02] flex-1 min-w-[100px] max-w-[140px] mx-auto">
+        <img src="./images/one.png" alt="Partner 2"
+             class="w-full h-25 object-cover transition-transform duration-400 ease-in-out hover:scale-105">
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="overflow-hidden rounded-2xl transition-transform duration-250 hover:scale-[1.02] flex-1 min-w-[100px] max-w-[140px] mx-auto">
+        <img src="./images/two.png" alt="Partner 3"
+             class="w-full h-25 object-cover transition-transform duration-400 ease-in-out hover:scale-105">
+      </div>
+
+      <!-- Partner 4 -->
+      <div class="overflow-hidden rounded-2xl transition-transform duration-250 hover:scale-[1.02] flex-1 min-w-[100px] max-w-[140px] mx-auto">
+        <img src="./images/three.png" alt="Partner 4"
+             class="w-full h-25 object-cover transition-transform duration-400 ease-in-out hover:scale-105">
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- About Section -->
+  <section class="bg-antique py-20 text-center fade-in">
+    <h3 class="text-3xl font-light mb-10 text-charcoal">Why Choose SereneSpaces?</h3>
+    <div class="grid md:grid-cols-3 gap-8 px-6">
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/e0c097/idea.png" class="mx-auto mb-4" alt="Design Icon">
+        <h4 class="text-xl font-medium mb-2">Thoughtful Design</h4>
+        <p class="text-gray-700">Each property is designed to maximize space, light, and comfort.</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/e0c097/real-estate-agent.png" class="mx-auto mb-4" alt="Agent Icon">
+        <h4 class="text-xl font-medium mb-2">Trusted Agents</h4>
+        <p class="text-gray-700">Work with experienced agents who guide you every step of the way.</p>
+      </div>
+      <div>
+        <img src="https://img.icons8.com/ios-filled/50/e0c097/home.png" class="mx-auto mb-4" alt="Home Icon">
+        <h4 class="text-xl font-medium mb-2">Lasting Value</h4>
+        <p class="text-gray-700">Properties that blend modern elegance with timeless value.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="py-16 bg-champagne text-white text-center fade-in">
+    <h3 class="text-3xl font-light mb-4">Your Dream Home Awaits</h3>
+    <p class="mb-6 text-lg">Experience serenity, simplicity, and sophistication with SereneSpaces Realty.</p>
+    <button class="bg-white text-champagne px-6 py-3 rounded-full font-medium hover:bg-taupe hover:text-white transition">
+      Contact Us
+    </button>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-charcoal text-antique py-10">
+    <div class="container mx-auto px-6 md:px-12">
+      <div class="grid md:grid-cols-3 gap-10 text-center md:text-left">
+        
+        <!-- About -->
+        <div>
+          <h4 class="text-xl font-semibold text-champagne mb-4">Serenade Realty</h4>
+          <p class="text-antique text-sm leading-relaxed">
+            Where luxury meets serenity. Discover homes that blend timeless elegance, comfort, and sophistication designed to match your lifestyle.
+          </p>
+        </div>
+
+        <!-- Contact & Schedule -->
+        <div>
+          <h4 class="text-xl font-semibold text-champagne mb-4">Visit or Contact Us</h4>
+          <p class="text-sm mb-2 flex items-center justify-center md:justify-start">
+            <img src="https://img.icons8.com/ios-filled/20/e0c097/marker.png" class="mr-2"> Tagaytay, Cavite, Calabarzon, Philippines
+          </p>
+          <p class="text-sm mb-2 flex items-center justify-center md:justify-start">
+            <img src="https://img.icons8.com/ios-filled/20/e0c097/clock--v1.png" class="mr-2"> Mon–Sat: 9:00 AM – 6:00 PM
+          </p>
+          <p class="text-sm mb-2 flex items-center justify-center md:justify-start">
+            <img src="https://img.icons8.com/ios-filled/20/e0c097/phone.png" class="mr-2"> +63 912 345 6789
+          </p>
+          <p class="text-sm flex items-center justify-center md:justify-start">
+            <img src="https://img.icons8.com/ios-filled/20/e0c097/new-post.png" class="mr-2"> serenaderealtyexample@gmail.com
+          </p>
+        </div>
+
+        <!-- Social Icons -->
+        <div>
+          <h4 class="text-xl font-semibold text-champagne mb-4">Follow Us</h4>
+          <div class="flex justify-center md:justify-start space-x-4">
+            <a href="#" class="hover:opacity-75 transition"><img src="https://img.icons8.com/ios-filled/30/e0c097/facebook.png" alt="Facebook"></a>
+            <a href="#" class="hover:opacity-75 transition"><img src="https://img.icons8.com/ios-filled/30/e0c097/instagram-new.png" alt="Instagram"></a>
+            <a href="#" class="hover:opacity-75 transition"><img src="https://img.icons8.com/ios-filled/30/e0c097/linkedin.png" alt="LinkedIn"></a>
+            <a href="#" class="hover:opacity-75 transition"><img src="https://img.icons8.com/ios-filled/30/e0c097/apple-mail.png" alt="Email"></a>
+            <a href="#" class="hover:opacity-75 transition"><img src="https://img.icons8.com/ios-filled/30/e0c097/phone.png" alt="Call"></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="mt-10 border-t border-taupe pt-6 text-center text-sm text-antique">
+        <p>&copy; 2025 Serenade Realty. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ✅ Property Modal (Added with Next/Prev) -->
+  <div id="property-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50">
+    <div class="bg-white rounded-lg shadow-lg w-full max-w-3xl mx-4 relative overflow-hidden">
+      <button id="close-modal" class="absolute top-3 right-3 text-gray-500 hover:text-champagne text-3xl z-20">&times;</button>
+
+      <!-- ✅ Prev / Next buttons -->
+      <button id="prev-property" class="absolute left-3 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-champagne text-charcoal px-3 py-2 rounded-full shadow-md z-20">&larr;</button>
+      <button id="next-property" class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-white/70 hover:bg-champagne text-charcoal px-3 py-2 rounded-full shadow-md z-20">&rarr;</button>
+
+      <div class="md:flex">
+        <img id="modal-image" src="" alt="Property" class="w-full md:w-1/2 h-64 md:h-auto object-cover rounded-t-lg md:rounded-l-lg md:rounded-tr-none">
+        <div class="p-6 flex-1">
+          <h3 id="modal-title" class="text-2xl font-semibold text-charcoal mb-2"></h3>
+          <p id="modal-location" class="text-gray-600 mb-1"></p>
+          <p id="modal-price" class="text-champagne text-xl font-bold mb-4"></p>
+          <p id="modal-description" class="text-gray-700 mb-4"></p>
+
+          <div class="grid grid-cols-2 gap-4 text-sm text-gray-600 mb-4">
+            <p><strong>Bedrooms:</strong> <span id="modal-bedrooms"></span></p>
+            <p><strong>Bathrooms:</strong> <span id="modal-bathrooms"></span></p>
+            <p><strong>Lot Area:</strong> <span id="modal-lot"></span></p>
+            <p><strong>Amenities:</strong> <span id="modal-amenities"></span></p>
+          </div>
+
+          <div class="flex gap-3">
+            <button class="bg-champagne text-white px-6 py-2 rounded-full hover:bg-taupe transition">
+              Schedule a Visit
+            </button>
+            <button class="border border-champagne text-champagne px-6 py-2 rounded-full hover:bg-champagne hover:text-white transition">
+              Contact Agent
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script1.js"></script>
+</body>
+</html>
